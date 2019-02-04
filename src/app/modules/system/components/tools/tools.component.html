@@ -1,0 +1,27 @@
+<section class="container left-container">
+  <h2 class="title">
+    <span>Tools</span>
+  </h2>
+  <span class="divider"></span>
+  <ul class="left-container-navigation-list">
+    <li routerLinkActive="active">
+      <a routerLink="password-generator">Password Generator</a>
+    </li>
+  </ul>
+</section>
+<section class="container middle-container">
+  <!-- Middle container mobile lists with side containers content -->
+  <div class="mobile-sides-containers-content">
+    <!-- Tools container -->
+    <div class="list-wrapper">
+      <div class="header">
+        <h2>Tools</h2>
+        <i class="fas fa-caret-down"></i>
+      </div>
+      <ul class="left-container-navigation-list mobile-drop-down">
+        <li class="active">Password Generator</li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</section>

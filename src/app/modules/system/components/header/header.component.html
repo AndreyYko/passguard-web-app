@@ -1,0 +1,85 @@
+<header>
+  <!--PC header-->
+  <nav class="pc">
+    <ul class="header-navigation">
+      <li class="active">
+        <a routerLink="/vault">
+          <i class="fas fa-shield-alt icon"></i>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/vault" class="default-link">Storage</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/tools" class="default-link">Tools</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/settings" class="default-link">Settings</a>
+      </li>
+    </ul>
+    <ul class="header-navigation">
+      <li class="user-icons">
+        <span class="user-icon-wrapper">
+          <i class="fas fa-user user-icon"></i>
+        </span>
+        <span class="icon-arrow"></span>
+      </li>
+      <section class="drop-down user-drop-down">
+        <nav>
+          <ul class="mobile-navigation">
+            <li class="signed-us-wrapper">
+              <span class="mobile-navigation-link">
+                <span class="mobile-nav-icon signed-us-icon">A</span>
+                <div>
+                  <span class="signed-us-label">Signed as</span>
+                  <span class="signed-us-value">Andrii</span>
+                </div>
+              </span>
+            </li>
+            <span class="divider"></span>
+            <li>
+              <a href="" class="mobile-navigation-link">
+                <i class="far fa-user mobile-nav-icon"></i>
+                <span>Account</span>
+              </a>
+            </li>
+            <li>
+              <a href="" class="mobile-navigation-link">
+                <i class="fas fa-question mobile-nav-icon"></i>
+                <span>Get help</span>
+              </a>
+            </li>
+            <span class="divider"></span>
+            <li>
+              <a href="" class="mobile-navigation-link">
+                <i class="fas fa-lock mobile-nav-icon"></i>
+                <span>Lock</span>
+              </a>
+            </li>
+            <li>
+              <a href="" class="mobile-navigation-link">
+                <i class="fas fa-sign-out-alt mobile-nav-icon"></i>
+                <span>Log out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </ul>
+  </nav>
+  <!--Mobile header-->
+  <nav class="mobile">
+    <ul class="header-navigation">
+      <li class="active">
+        <button class="open-mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </li>
+      <li class="active">
+        <span class="default-link">Storage</span>
+      </li>
+    </ul>
+  </nav>
+</header>

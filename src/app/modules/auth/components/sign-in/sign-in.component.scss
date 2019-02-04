@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  .buttons {
+    button, a {
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
