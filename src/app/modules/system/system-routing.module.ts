@@ -2,25 +2,25 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SystemComponent } from './system.component';
-import { VaultComponent } from './components/vault/vault.component';
-import { ToolsComponent } from './components/tools/tools.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { PasswordGeneratorComponent } from './components/tools/password-generator/password-generator.component';
-import { MyAccountComponent } from './components/settings/my-account/my-account.component';
-import { OrganizationsComponent } from './components/settings/organizations/organizations.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
+import { SettingsMyAccountComponent } from './pages/settings-page/settings-my-account/settings-my-account.component';
+import { SettingsOrganizationsComponent } from './pages/settings-page/settings-organizations/settings-organizations.component';
+import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
+import { ToolsPasswordGeneratorComponent } from './pages/tools-page/tools-password-generator/tools-password-generator.component';
+import { VaultPageComponent } from './pages/vault-page/vault-page.component';
 
 const routes: Routes = [
   { path: '', component: SystemComponent, children: [
-      { path: 'vault', component: VaultComponent },
-      { path: 'tools', component: ToolsComponent, children: [
+      { path: 'vault', component: VaultPageComponent },
+      { path: 'tools', component: ToolsPageComponent, children: [
           { path: '', redirectTo: 'password-generator', pathMatch: 'full' },
-          { path: 'password-generator', component: PasswordGeneratorComponent }
+          { path: 'password-generator', component: ToolsPasswordGeneratorComponent }
         ]
       },
-      { path: 'settings', component: SettingsComponent, children: [
+      { path: 'settings', component: SettingsPageComponent, children: [
           { path: '', redirectTo: 'my-account', pathMatch: 'full' },
-          { path: 'my-account', component: MyAccountComponent },
-          { path: 'organizations', component: OrganizationsComponent }
+          { path: 'my-account', component: SettingsMyAccountComponent },
+          { path: 'organizations', component: SettingsOrganizationsComponent }
         ]
       }
     ]

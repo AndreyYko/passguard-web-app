@@ -1,32 +1,40 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SystemRoutingModule } from './system-routing.module';
-
+// Main components & routing module
 import { SystemComponent } from './system.component';
-import { VaultComponent } from './components/vault/vault.component';
-import { ToolsComponent } from './components/tools/tools.component';
-import { SettingsComponent } from './components/settings/settings.component';
+import { SystemRoutingModule } from './system-routing.module';
+// Pages
+import { VaultPageComponent } from './pages/vault-page/vault-page.component';
+import { ToolsPageComponent } from './pages/tools-page/tools-page.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
+// Components
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
-import { PasswordGeneratorComponent } from './components/tools/password-generator/password-generator.component';
-import { MyAccountComponent } from './components/settings/my-account/my-account.component';
-import { OrganizationsComponent } from './components/settings/organizations/organizations.component';
+import { SettingsMyAccountComponent } from './pages/settings-page/settings-my-account/settings-my-account.component';
+import { SettingsOrganizationsComponent } from './pages/settings-page/settings-organizations/settings-organizations.component';
+import { ToolsPasswordGeneratorComponent } from './pages/tools-page/tools-password-generator/tools-password-generator.component';
+import { LeftSidebarComponent } from './components/left-sidebar/left-sidebar.component';
+import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.component';
 
 
 @NgModule({
   declarations: [
     SystemComponent,
-    VaultComponent,
-    ToolsComponent,
-    SettingsComponent,
+    VaultPageComponent,
+    ToolsPageComponent,
     HeaderComponent,
     FooterComponent,
     MobileMenuComponent,
-    PasswordGeneratorComponent,
-    MyAccountComponent,
-    OrganizationsComponent
+    ToolsPasswordGeneratorComponent,
+    SettingsMyAccountComponent,
+    SettingsOrganizationsComponent,
+    VaultPageComponent,
+    ToolsPageComponent,
+    SettingsPageComponent,
+    ToolsPasswordGeneratorComponent,
+    LeftSidebarComponent,
+    RightSidebarComponent
   ],
   imports: [
     CommonModule,

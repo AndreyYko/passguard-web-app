@@ -1,0 +1,11 @@
+:host {
+  flex: 1;
+  max-width: calc(25% - 2px);
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+section.left-container {
+  max-width: 100%;
+}
