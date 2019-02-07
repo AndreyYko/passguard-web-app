@@ -1,5 +1,12 @@
 <!-- Mobile Menu -->
+<app-mobile-menu [@toggleMobileMenu]="true" *ngIf="isMobileMenu$ | async"></app-mobile-menu>
 <section class="page-content">
+  <!-- Stub for mobile menu, for closing -->
+  <div
+    *ngIf="isMobileMenu$ | async"
+    (click)="toggleMobileMenu()"
+    class="mobile-menu-stub"
+  ></div>
   <!--Header-->
   <app-header></app-header>
   <!--Content-->

@@ -1,4 +1,4 @@
-<section class="mobile mobile-menu">
+<section class="mobile mobile-menu" [ngClass]="{ 'opened': (isOpened$ | async) }">
   <!--Mobile menu top side-->
   <div>
       <span class="logo">
@@ -8,37 +8,22 @@
     <nav>
       <ul class="mobile-navigation">
         <li>
-          <a href="" class="mobile-navigation-link">
-            <i class="far fa-hdd mobile-nav-icon"></i>
-            <span>Storage</span>
-          </a>
+          <app-mobile-menu-link [navigateTo]="'/vault'" [title]="'Storage'"></app-mobile-menu-link>
         </li>
         <li>
-          <a href="" class="mobile-navigation-link">
-            <i class="fas fa-wrench mobile-nav-icon"></i>
-            <span>Tools</span>
-          </a>
+          <app-mobile-menu-link [navigateTo]="'/tools'" [title]="'Tools'"></app-mobile-menu-link>
         </li>
         <li>
-          <a href="" class="mobile-navigation-link">
-            <i class="fas fa-sliders-h mobile-nav-icon"></i>
-            <span>Settings</span>
-          </a>
+          <app-mobile-menu-link [navigateTo]="'/settings'" [title]="'Settings'"></app-mobile-menu-link>
         </li>
       </ul>
       <span class="divider"></span>
       <ul class="mobile-navigation">
         <li>
-          <a href="" class="mobile-navigation-link">
-            <i class="far fa-user mobile-nav-icon"></i>
-            <span>Account</span>
-          </a>
+          <app-mobile-menu-link [navigateTo]="'/settings/my-account'" [title]="'Account'"></app-mobile-menu-link>
         </li>
         <li>
-          <a href="" class="mobile-navigation-link">
-            <i class="fas fa-question mobile-nav-icon"></i>
-            <span>Get help</span>
-          </a>
+          <app-mobile-menu-link [navigateTo]="'/vault'" [title]="'Get Help'"></app-mobile-menu-link>
         </li>
       </ul>
     </nav>
@@ -48,16 +33,10 @@
     <nav>
       <ul class="mobile-navigation">
         <li>
-          <a href="" class="mobile-navigation-link">
-            <i class="fas fa-lock mobile-nav-icon"></i>
-            <span>Lock</span>
-          </a>
+          <app-mobile-menu-link [navigateTo]="'/vault'" [title]="'Lock'"></app-mobile-menu-link>
         </li>
         <li>
-          <a href="" class="mobile-navigation-link">
-            <i class="fas fa-sign-out-alt mobile-nav-icon"></i>
-            <span>Log out</span>
-          </a>
+          <app-mobile-menu-link [navigateTo]="'/vault'" [title]="'Sign Out'"></app-mobile-menu-link>
         </li>
       </ul>
     </nav>

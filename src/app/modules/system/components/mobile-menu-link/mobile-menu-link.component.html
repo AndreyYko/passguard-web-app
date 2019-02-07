@@ -1,0 +1,10 @@
+<a routerLink="{{ navigateTo }}" class="mobile-navigation-link" (click)="toggleMobileMenu()">
+  <i *ngIf="title === 'Storage'" class="far fa-hdd mobile-nav-icon"></i>
+  <i *ngIf="title === 'Tools'" class="fas fa-wrench mobile-nav-icon"></i>
+  <i *ngIf="title === 'Settings'" class="fas fa-sliders-h mobile-nav-icon"></i>
+  <i *ngIf="title === 'Account'" class="far fa-user mobile-nav-icon"></i>
+  <i *ngIf="title === 'Get Help'" class="fas fa-question mobile-nav-icon"></i>
+  <i *ngIf="title === 'Lock'" class="fas fa-lock mobile-nav-icon"></i>
+  <i *ngIf="title === 'Sign Out'" class="fas fa-sign-out-alt mobile-nav-icon"></i>
+  <span>{{ title }}</span>
+</a>

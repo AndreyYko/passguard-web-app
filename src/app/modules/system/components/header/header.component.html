@@ -8,13 +8,13 @@
         </a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/vault" class="default-link">Storage</a>
+        <a routerLink="/vault" class="default-link">{{ headerLinkTitles.SETTINGS }}</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/tools" class="default-link">Tools</a>
+        <a routerLink="/tools" class="default-link">{{ headerLinkTitles.TOOLS }}</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/settings" class="default-link">Settings</a>
+        <a routerLink="/settings" class="default-link">{{ headerLinkTitles.SETTINGS }}</a>
       </li>
     </ul>
     <ul class="header-navigation">
@@ -70,7 +70,7 @@
   <!--Mobile header-->
   <nav class="mobile">
     <ul class="header-navigation">
-      <li class="active">
+      <li class="active" (click)="toggleMobileMenu()">
         <button class="open-mobile-menu">
           <span></span>
           <span></span>

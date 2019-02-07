@@ -1,95 +1,9 @@
 <!-- Middle container header -->
-<div class="middle-container-header">
-  <h1>My Account</h1>
-</div>
 <!-- Middle container content -->
-<div class="middle-container-content">
-  <div class="settings-account-details-wrapper">
-    <form class="settings-account-details-form">
-      <div class="settings-account-details-form-group">
-        <label for="settings-account-details-name">Name</label>
-        <input type="text" id="settings-account-details-name" value="Andriy">
-      </div>
-      <div class="settings-account-details-form-group">
-        <label for="settings-account-details-email">Email</label>
-        <input type="text" id="settings-account-details-email" disabled value="andrushagalushka@gmail.com">
-      </div>
-      <div class="settings-account-details-form-group last">
-        <label for="settings-account-details-password-hint">Master Password Hint</label>
-        <input type="text" id="settings-account-details-password-hint">
-      </div>
-      <button type="submit" class="default-middle-content-form-button orange fit-content-width">Save</button>
-    </form>
-    <div class="settings-account-details-picture-wrapper">
-            <span class="settings-account-details-picture-bg">
-              <span class="settings-account-details-picture-text">AN</span>
-            </span>
-    </div>
-  </div>
-</div>
+<app-settings-my-account-account></app-settings-my-account-account>
 
-<div class="middle-container-header">
-  <h1>Change Email</h1>
-</div>
-<div class="middle-container-content">
-  <div class="settings-change-email-wrapper">
-    <form class="settings-account-details-form">
-      <div class="settings-account-details-form-group">
-        <label for="settings-change-email-password">Master Password</label>
-        <input type="password" id="settings-change-email-password">
-      </div>
-      <div class="settings-account-details-form-group last">
-        <label for="settings-change-email-new-email">New Email</label>
-        <input type="text" id="settings-change-email-new-email">
-      </div>
-      <button type="submit" class="default-middle-content-form-button orange fit-content-width">Continue</button>
-    </form>
-  </div>
-</div>
+<app-settings-my-account-email></app-settings-my-account-email>
 
-<div class="middle-container-header big-bottom-margin">
-  <h1>Change Master Password</h1>
-</div>
-<div class="middle-container-content">
-  <div class="settings-change-password-wrapper">
-    <mark class="info-message warning">
-      <h4>
-        <i class="fas fa-exclamation-triangle"></i>
-        WARNING
-      </h4>
-      <p>
-        Proceeding will log you out of your current session, requiring you to log back in. Active sessions on
-        other devices may continue to remain active for up to one hour.
-      </p>
-    </mark>
-    <form class="settings-account-details-form top-margin">
-      <div class="settings-account-details-form-group">
-        <label for="settings-change-password-current-password">Current Master Password</label>
-        <input type="password" id="settings-change-password-current-password">
-      </div>
-      <div class="settings-account-details-form-group">
-        <label for="settings-change-password-new-password">New Master Password</label>
-        <input type="password" id="settings-change-password-new-password">
-      </div>
-      <div class="settings-account-details-form-group last">
-        <label for="settings-change-password-confirm-new-password">Confirm New Master Password</label>
-        <input type="password" id="settings-change-password-confirm-new-password">
-      </div>
-      <button type="submit" class="default-middle-content-form-button orange fit-content-width">Continue</button>
-    </form>
-  </div>
-</div>
+<app-settings-my-account-password></app-settings-my-account-password>
 
-<div class="middle-container-header settings-danger-zone">
-  <h1>Danger Zone</h1>
-</div>
-<div class="middle-container-content">
-  <div class="settings-danger-zone-wrapper">
-    <p>Careful, these actions are not reversible!</p>
-    <div class="buttons">
-      <button type="button" class="default-middle-content-form-button danger">Deauthorize Sessions</button>
-      <button type="button" class="default-middle-content-form-button danger">Purge Vault</button>
-      <button type="button" class="default-middle-content-form-button danger">Delete Account</button>
-    </div>
-  </div>
-</div>
+<app-settings-my-account-danger></app-settings-my-account-danger>

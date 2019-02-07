@@ -201,6 +201,7 @@ section.mobile-menu {
           align-items: flex-end;
   width: 0;
   height: 100vh;
+  min-height: 100%;
   border-right: 0 solid #eee;
   position: relative;
   z-index: 11;
