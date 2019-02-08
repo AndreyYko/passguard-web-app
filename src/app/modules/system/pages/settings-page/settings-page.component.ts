@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { LeftSidebarLink } from '../../models/left-sidebar-link.model';
 
+import { PAGES } from '../../consts';
+
 @Component({
   selector: 'app-settings-page',
   templateUrl: './settings-page.component.html',
@@ -18,6 +20,7 @@ export class SettingsPageComponent implements OnInit {
       url: 'organizations'
     }
   ];
+  public page: string = PAGES.SETTINGS;
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TITLE_MY_ACCOUNT } from '../../../../consts';
+import { MIDDLE_CONTAINER_HEADERS_TITLES } from '../../../../consts';
 
 @Component({
   selector: 'app-settings-my-account-account',
@@ -8,7 +8,7 @@ import { TITLE_MY_ACCOUNT } from '../../../../consts';
   styleUrls: ['./settings-my-account-account.component.scss']
 })
 export class SettingsMyAccountAccountComponent implements OnInit {
-  public title = TITLE_MY_ACCOUNT;
+  public title: string = MIDDLE_CONTAINER_HEADERS_TITLES.MY_ACCOUNT;
 
   constructor() { }
 

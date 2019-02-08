@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TITLE_DANGER_ZONE } from '../../../../consts';
+import { MIDDLE_CONTAINER_HEADERS_TITLES } from '../../../../consts';
 
 @Component({
   selector: 'app-settings-my-account-danger',
@@ -8,7 +8,7 @@ import { TITLE_DANGER_ZONE } from '../../../../consts';
   styleUrls: ['./settings-my-account-danger.component.scss']
 })
 export class SettingsMyAccountDangerComponent implements OnInit {
-  public title = TITLE_DANGER_ZONE;
+  public title: string = MIDDLE_CONTAINER_HEADERS_TITLES.DANGER_ZONE;
 
   constructor() { }
 

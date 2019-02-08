@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { LeftSidebarLink } from '../../models/left-sidebar-link.model';
 
+import { PAGES } from '../../consts';
+
 @Component({
   selector: 'app-tools-page',
   templateUrl: './tools-page.component.html',
@@ -14,6 +16,8 @@ export class ToolsPageComponent implements OnInit {
       url: 'password-generator'
     }
   ];
+  public page: string = PAGES.TOOLS;
+
   constructor() { }
 
   ngOnInit() {

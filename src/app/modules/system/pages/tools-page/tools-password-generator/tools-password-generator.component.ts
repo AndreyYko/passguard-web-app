@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TITLE_PASSWORD_GENERATOR } from '../../../consts';
+import { MIDDLE_CONTAINER_HEADERS_TITLES } from '../../../consts';
 
 @Component({
   selector: 'app-tools-password-generator',
@@ -8,7 +8,7 @@ import { TITLE_PASSWORD_GENERATOR } from '../../../consts';
   styleUrls: ['./tools-password-generator.component.scss']
 })
 export class ToolsPasswordGeneratorComponent implements OnInit {
-  public title = TITLE_PASSWORD_GENERATOR;
+  public title: string = MIDDLE_CONTAINER_HEADERS_TITLES.PASSWORD_GENERATOR;
 
   constructor() { }
 

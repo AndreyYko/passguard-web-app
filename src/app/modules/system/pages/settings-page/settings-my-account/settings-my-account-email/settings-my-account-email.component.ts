@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TITLE_CHANGE_EMAIL } from '../../../../consts';
+import { MIDDLE_CONTAINER_HEADERS_TITLES } from '../../../../consts';
 
 @Component({
   selector: 'app-settings-my-account-email',
@@ -8,7 +8,7 @@ import { TITLE_CHANGE_EMAIL } from '../../../../consts';
   styleUrls: ['./settings-my-account-email.component.scss']
 })
 export class SettingsMyAccountEmailComponent implements OnInit {
-  public title = TITLE_CHANGE_EMAIL;
+  public title: string = MIDDLE_CONTAINER_HEADERS_TITLES.CHANGE_EMAIL;
 
   constructor() { }
 

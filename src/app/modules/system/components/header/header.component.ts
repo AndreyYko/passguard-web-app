@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Router } from '@angular/router';
 
 import { State } from '../../store/reducers';
 import { ToggleMobileMenu } from '../../store/actions/mobile-menu.actions';
 
-import { headerLinkTitles } from '../../consts';
+import { PAGES } from '../../consts';
 
 @Component({
   selector: 'app-header',
@@ -12,16 +13,21 @@ import { headerLinkTitles } from '../../consts';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public headerLinkTitles = headerLinkTitles;
+  public pages = PAGES;
 
   constructor(
-    private store: Store<State>
-  ) { }
+    private store: Store<State>,
+    public router: Router
+  ) {}
 
   ngOnInit() {
   }
 
   public toggleMobileMenu() {
     this.store.dispatch(new ToggleMobileMenu());
+  }
+
+  public isTitleFor(url): boolean {
+    return this.router.url.includes(`/${url}`);
   }
 }

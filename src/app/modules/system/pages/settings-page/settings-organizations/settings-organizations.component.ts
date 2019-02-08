@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TITLE_ORGANIZATIONS } from '../../../consts';
+import { MIDDLE_CONTAINER_HEADERS_TITLES } from '../../../consts';
 
 @Component({
   selector: 'app-settings-organizations',
@@ -8,7 +8,7 @@ import { TITLE_ORGANIZATIONS } from '../../../consts';
   styleUrls: ['./settings-organizations.component.scss']
 })
 export class SettingsOrganizationsComponent implements OnInit {
-  public title = TITLE_ORGANIZATIONS;
+  public title = MIDDLE_CONTAINER_HEADERS_TITLES.ORGANIZATIONS;
 
   constructor() { }
 

@@ -1,17 +1,6 @@
 <app-left-sidebar [navigation]="navigation"></app-left-sidebar>
 <section class="container middle-container">
   <!-- Middle container mobile lists with side containers content -->
-  <div class="mobile-sides-containers-content">
-    <!-- Tools container -->
-    <div class="list-wrapper">
-      <div class="header">
-        <h2>Tools</h2>
-        <i class="fas fa-caret-down"></i>
-      </div>
-      <ul class="left-container-navigation-list mobile-drop-down">
-        <li class="active">Password Generator</li>
-      </ul>
-    </div>
-  </div>
+  <app-drop-down [page]="page"></app-drop-down>
   <router-outlet></router-outlet>
 </section>

@@ -8,13 +8,13 @@
         </a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/vault" class="default-link">{{ headerLinkTitles.SETTINGS }}</a>
+        <a routerLink="/vault" class="default-link">{{ pages.SETTINGS }}</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/tools" class="default-link">{{ headerLinkTitles.TOOLS }}</a>
+        <a routerLink="/tools" class="default-link">{{ pages.TOOLS }}</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/settings" class="default-link">{{ headerLinkTitles.SETTINGS }}</a>
+        <a routerLink="/settings" class="default-link">{{ pages.SETTINGS }}</a>
       </li>
     </ul>
     <ul class="header-navigation">
@@ -78,7 +78,9 @@
         </button>
       </li>
       <li class="active">
-        <span class="default-link">Storage</span>
+        <span *ngIf="isTitleFor('vault')" class="default-link">{{ pages.STORAGE }}</span>
+        <span *ngIf="isTitleFor('tools')" class="default-link">{{ pages.TOOLS }}</span>
+        <span *ngIf="isTitleFor('settings')" class="default-link">{{ pages.SETTINGS }}</span>
       </li>
     </ul>
   </nav>

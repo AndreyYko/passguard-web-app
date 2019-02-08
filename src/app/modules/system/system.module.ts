@@ -26,6 +26,7 @@ import { SettingsMyAccountPasswordComponent } from './pages/settings-page/settin
 import { SettingsMyAccountDangerComponent } from './pages/settings-page/settings-my-account/settings-my-account-danger/settings-my-account-danger.component';
 
 import { Reducers } from './store/reducers';
+import { DropDownComponent } from './components/drop-down/drop-down.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { Reducers } from './store/reducers';
     ToolsPasswordGeneratorComponent,
     LeftSidebarComponent,
     RightSidebarComponent,
-    MiddleContentHeaderComponent
+    MiddleContentHeaderComponent,
+    DropDownComponent
   ],
   imports: [
     CommonModule,

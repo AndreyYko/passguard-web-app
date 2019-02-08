@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TITLE_STORAGE } from '../../consts';
+import { MIDDLE_CONTAINER_HEADERS_TITLES, PAGES } from '../../consts';
 
 @Component({
   selector: 'app-vault-page',
@@ -8,7 +8,8 @@ import { TITLE_STORAGE } from '../../consts';
   styleUrls: ['./vault-page.component.scss']
 })
 export class VaultPageComponent implements OnInit {
-  public title = TITLE_STORAGE;
+  public title: string = MIDDLE_CONTAINER_HEADERS_TITLES.STORAGE;
+  public page: string = PAGES.STORAGE;
   
   constructor() { }
 

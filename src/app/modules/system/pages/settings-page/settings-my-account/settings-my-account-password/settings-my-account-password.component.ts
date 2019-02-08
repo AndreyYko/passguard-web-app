@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TITLE_CHANGE_MASTER_PASSWORD } from '../../../../consts';
+import { MIDDLE_CONTAINER_HEADERS_TITLES } from '../../../../consts';
 
 @Component({
   selector: 'app-settings-my-account-password',
@@ -8,7 +8,7 @@ import { TITLE_CHANGE_MASTER_PASSWORD } from '../../../../consts';
   styleUrls: ['./settings-my-account-password.component.scss']
 })
 export class SettingsMyAccountPasswordComponent implements OnInit {
-  public title = TITLE_CHANGE_MASTER_PASSWORD;
+  public title: string = MIDDLE_CONTAINER_HEADERS_TITLES.CHANGE_MASTER_PASSWORD;
 
   constructor() { }
 

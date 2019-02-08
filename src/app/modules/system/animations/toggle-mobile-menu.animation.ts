@@ -11,8 +11,7 @@ export const toggleMobileMenuStateTrigger = trigger('toggleMobileMenu', [
       width: '0',
     }),
     animate(200, style({
-      width: '70vw',
-      maxWidth: '290px'
+      width: '250px',
     }))
   ]),
   transition(':leave', animate(200, style({

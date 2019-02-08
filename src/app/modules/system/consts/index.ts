@@ -1,13 +1,15 @@
-// Middle container header titles
-export const TITLE_STORAGE = 'Storage';
-export const TITLE_PASSWORD_GENERATOR = 'Password Generator';
-export const TITLE_MY_ACCOUNT = 'My Account';
-export const TITLE_CHANGE_EMAIL = 'Change Email';
-export const TITLE_CHANGE_MASTER_PASSWORD = 'Change Master Password';
-export const TITLE_DANGER_ZONE = 'Danger Zone';
-export const TITLE_ORGANIZATIONS = 'Organizations';
+// Middle container headers titles
+export enum MIDDLE_CONTAINER_HEADERS_TITLES {
+  STORAGE = 'Storage',
+  PASSWORD_GENERATOR = 'My Account',
+  MY_ACCOUNT = 'My Account',
+  CHANGE_EMAIL = 'Change Email',
+  CHANGE_MASTER_PASSWORD = 'Change Master Password',
+  DANGER_ZONE = 'Danger Zone',
+  ORGANIZATIONS = 'Organizations'
+}
 // Header link titles
-export enum headerLinkTitles {
+export enum PAGES {
   STORAGE = 'Storage',
   TOOLS = 'Tools',
   SETTINGS = 'Settings'
