@@ -1,0 +1,16 @@
+.mobile-drop-down {
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #000;
+    }
+    &.active {
+      a {
+        color: #f4a53d;
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 // Main components & routing module
 import { SystemComponent } from './system.component';
@@ -24,9 +23,12 @@ import { SettingsMyAccountAccountComponent } from './pages/settings-page/setting
 import { SettingsMyAccountEmailComponent } from './pages/settings-page/settings-my-account/settings-my-account-email/settings-my-account-email.component';
 import { SettingsMyAccountPasswordComponent } from './pages/settings-page/settings-my-account/settings-my-account-password/settings-my-account-password.component';
 import { SettingsMyAccountDangerComponent } from './pages/settings-page/settings-my-account/settings-my-account-danger/settings-my-account-danger.component';
+import { DropDownComponent } from './components/drop-down/drop-down.component';
+import { VaultOrganizationsListComponent } from './components/vault-organizations-list/vault-organizations-list.component';
+import { VaultFiltersComponent } from './components/vault-filters/vault-filters.component';
+import { VaultSettingsListComponent } from './components/vault-settings-list/vault-settings-list.component';
 
 import { Reducers } from './store/reducers';
-import { DropDownComponent } from './components/drop-down/drop-down.component';
 
 
 @NgModule({
@@ -52,7 +54,10 @@ import { DropDownComponent } from './components/drop-down/drop-down.component';
     LeftSidebarComponent,
     RightSidebarComponent,
     MiddleContentHeaderComponent,
-    DropDownComponent
+    DropDownComponent,
+    VaultOrganizationsListComponent,
+    VaultFiltersComponent,
+    VaultSettingsListComponent
   ],
   imports: [
     CommonModule,

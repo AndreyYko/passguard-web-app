@@ -1,0 +1,17 @@
+<section class="drop-down settings-drop-down" [ngClass]="{ 'opened': (isOpened$ | async) }">
+  <ul>
+    <li class="delete">
+      <i class="fas fa-trash-alt mobile-nav-icon"></i>
+      <span>Delete selected</span>
+    </li>
+    <span class="divider"></span>
+    <li>
+      <i class="fas fa-check-square mobile-nav-icon"></i>
+      <span>Check all</span>
+    </li>
+    <li>
+      <i class="far fa-check-square mobile-nav-icon"></i>
+      <span>Uncheck all</span>
+    </li>
+  </ul>
+</section>

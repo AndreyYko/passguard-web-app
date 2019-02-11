@@ -1,35 +1,25 @@
 <div class="middle-container-header" [ngClass]="{ 'settings-danger-zone': isDangerZone }">
   <h1>{{ title }}</h1>
-  <div *ngIf="isButtons && title === 'Storage'" class="buttons">
+  <div *ngIf="isButtons && title === titles.STORAGE" class="buttons">
     <div class="settings-container">
-      <button class="default-button settings">
+      <button class="default-button settings" (click)="toggleVaultSettingsList()">
         <i class="fas fa-cog"></i>
-        <i class="fas fa-caret-down"></i>
+        <i
+          class="fas fa-caret-down"
+          [ngStyle]="{ 'transform': (isVaultSettingsListOpened$ | async) ? 'rotate(180deg)' : 'none' }"
+        ></i>
       </button>
-      <section class="drop-down settings-drop-down">
-        <ul>
-          <li class="delete">
-            <i class="fas fa-trash-alt mobile-nav-icon"></i>
-            <span>Delete selected</span>
-          </li>
-          <span class="divider"></span>
-          <li>
-            <i class="fas fa-check-square mobile-nav-icon"></i>
-            <span>Check all</span>
-          </li>
-          <li>
-            <i class="far fa-check-square mobile-nav-icon"></i>
-            <span>Uncheck all</span>
-          </li>
-        </ul>
-      </section>
+      <app-vault-settings-list
+        *ngIf="(isVaultSettingsListOpened$ | async)"
+        [@fade]="true"
+      ></app-vault-settings-list>
     </div>
     <button class="default-button add-item">
       <i class="fas fa-plus"></i>
       <span>Add Item</span>
     </button>
   </div>
-  <div *ngIf="isButtons && title === 'Organizations'" class="buttons">
+  <div *ngIf="isButtons && title === titles.ORGANIZATIONS" class="buttons">
     <button class="default-button add-item">
       <i class="fas fa-plus"></i>
       <span>New Organization</span>

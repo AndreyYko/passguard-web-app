@@ -14,3 +14,10 @@ export enum PAGES {
   TOOLS = 'Tools',
   SETTINGS = 'Settings'
 }
+// Titles from sides containers
+export enum SIDES_CONTAINERS_HEADERS_TITLES {
+  FILTERS = 'Filters',
+  ORGANIZATIONS = 'Organizations',
+  TOOLS = 'Tools',
+  SETTINGS = 'Settings'
+}

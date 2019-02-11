@@ -1,10 +1,7 @@
 import { Action } from '@ngrx/store';
 
 export class MobileMenu {
-  public isOpened: boolean;
-  constructor() {
-    this.isOpened = false;
-  }
+  public isOpened = false;
 }
 
 export enum ActionTypes {

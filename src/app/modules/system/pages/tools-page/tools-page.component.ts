@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { LeftSidebarLink } from '../../models/left-sidebar-link.model';
 
-import { PAGES } from '../../consts';
+import { PAGES, SIDES_CONTAINERS_HEADERS_TITLES } from '../../consts';
 
 @Component({
   selector: 'app-tools-page',
@@ -17,6 +17,7 @@ export class ToolsPageComponent implements OnInit {
     }
   ];
   public page: string = PAGES.TOOLS;
+  public toolsTitle: string = SIDES_CONTAINERS_HEADERS_TITLES.TOOLS;
 
   constructor() { }
 

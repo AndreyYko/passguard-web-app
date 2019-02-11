@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { LeftSidebarLink } from '../../models/left-sidebar-link.model';
 
-import { PAGES } from '../../consts';
+import { PAGES, SIDES_CONTAINERS_HEADERS_TITLES } from '../../consts';
 
 @Component({
   selector: 'app-settings-page',
@@ -21,6 +21,7 @@ export class SettingsPageComponent implements OnInit {
     }
   ];
   public page: string = PAGES.SETTINGS;
+  public settingsTitle: string = SIDES_CONTAINERS_HEADERS_TITLES.SETTINGS;
 
   constructor() { }
 

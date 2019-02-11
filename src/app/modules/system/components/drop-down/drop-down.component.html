@@ -1,108 +1,41 @@
 <!-- Middle container mobile lists with side containers content -->
 <div class="mobile-sides-containers-content">
-  <!-- Filters container -->
-  <div *ngIf="page === pages.STORAGE" class="list-wrapper">
-    <div class="header">
-      <h2>Filters</h2>
-      <i class="fas fa-caret-down"></i>
+  <div class="list-wrapper">
+    <div class="header" (click)="toggleDropDown()">
+      <h2>{{ title }}</h2>
+      <i
+        class="fas fa-caret-down"
+        [ngStyle]="{ 'transform': isOpened ? 'rotate(180deg)' : 'none' }"
+      ></i>
     </div>
-    <div class="side-content-wrapper mobile" [ngClass]="{ 'opened': pages.STORAGE && isOpened }">
-      <form class="left-container-search">
-        <input
-          type="text"
-          placeholder="Search in storage"
-          class="input-default"
-        >
-      </form>
-      <ul class="default-list first">
-        <li class="active">
-          <i class="fas fa-table"></i>
-          <span>All elements</span>
-        </li>
-        <li>
-          <i class="fas fa-star"></i>
-          <span>Favorite</span>
-        </li>
-      </ul>
-      <ul class="default-list">
-        <h3>Elements type</h3>
-        <li>
-          <i class="fas fa-globe"></i>
-          <span>Login</span>
-        </li>
-        <li>
-          <i class="far fa-credit-card"></i>
-          <span>Card</span>
-        </li>
-        <li>
-          <i class="far fa-id-card"></i>
-          <span>ID Card</span>
-        </li>
-        <li>
-          <i class="far fa-sticky-note"></i>
-          <span>Secure note</span>
-        </li>
-      </ul>
-      <ul class="default-list list-arrow">
-        <h3>Collections</h3>
-        <li>
-          <i class="fas fa-caret-right"></i>
-          <span>Collection 1</span>
-        </li>
-        <li>
-          <i class="fas fa-caret-right"></i>
-          <span>Collection 2</span>
-        </li>
-        <li>
-          <i class="fas fa-caret-right"></i>
-          <span>Collection 3</span>
-        </li>
-      </ul>
+
+    <div
+      *ngIf="isFilters && isOpened"
+      class="side-content-wrapper mobile"
+      [ngClass]="{ 'opened': isFilters && isOpened }"
+      [@fadeDropDown]="true"
+    >
+      <app-vault-filters></app-vault-filters>
     </div>
+
+    <div
+      *ngIf="isOrganizations && isOpened"
+      class="side-content-wrapper"
+      [ngClass]="{ 'opened': isOrganizations && isOpened }"
+      [@fade]="true"
+    >
+      <app-vault-organizations-list [isInDropDown]="true"></app-vault-organizations-list>
+    </div>
+
+    <ul
+      *ngIf="(isTools || isSettings) && isOpened"
+      class="left-container-navigation-list mobile-drop-down"
+      [ngClass]="{ 'opened': (isTools || isSettings) && isOpened }"
+      [@fade]="true"
+    >
+      <li *ngFor="let link of navigation" [routerLinkActive]="'active'">
+        <a [routerLink]="link.url">{{ link.title }}</a>
+      </li>
+    </ul>
   </div>
 </div>
-
-<!--&lt;!&ndash; Organizations container &ndash;&gt;-->
-<!--<div *ngIf="page === pages.STORAGE" class="list-wrapper">-->
-  <!--<div class="header">-->
-    <!--<h2>Organizations</h2>-->
-    <!--<i class="fas fa-caret-down"></i>-->
-  <!--</div>-->
-  <!--<div class="side-content-wrapper">-->
-    <!--<ul class="default-list list-arrow first">-->
-      <!--<li>-->
-        <!--<i class="fas fa-caret-right"></i>-->
-        <!--<span>Organization 1</span>-->
-      <!--</li>-->
-      <!--<li>-->
-        <!--<i class="fas fa-caret-right"></i>-->
-        <!--<span>Organization 2</span>-->
-      <!--</li>-->
-    <!--</ul>-->
-    <!--<button class="right-container-add-organization bottom-margin">-->
-      <!--<i class="fas fa-plus"></i>-->
-      <!--<span>New organization</span>-->
-    <!--</button>-->
-  <!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash; Tools container &ndash;&gt;-->
-<!--<div *ngIf="page === pages.TOOLS" class="list-wrapper">-->
-  <!--<div class="header">-->
-    <!--<h2>Tools</h2>-->
-    <!--<i class="fas fa-caret-down"></i>-->
-  <!--</div>-->
-  <!--<ul class="left-container-navigation-list mobile-drop-down">-->
-    <!--<li class="active">Password Generator</li>-->
-  <!--</ul>-->
-<!--</div>-->
-<!--&lt;!&ndash; Settings container &ndash;&gt;-->
-<!--<div *ngIf="page === pages.SETTINGS" class="list-wrapper">-->
-  <!--<div class="header">-->
-    <!--<h2>Settings</h2>-->
-    <!--<i class="fas fa-caret-down"></i>-->
-  <!--</div>-->
-  <!--<ul class="left-container-navigation-list mobile-drop-down">-->
-    <!--<li class="active">My Account</li>-->
-    <!--<li>Organizations</li>-->
-  <!--</ul>-->
-<!--</div>-->

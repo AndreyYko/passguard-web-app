@@ -5,7 +5,12 @@
   <div
     *ngIf="isMobileMenu$ | async"
     (click)="toggleMobileMenu()"
-    class="mobile-menu-stub"
+    class="stub"
+  ></div>
+  <div
+    *ngIf="isVaultSettingsList$ | async"
+    (click)="toggleVaultSettingsList()"
+    class="stub"
   ></div>
   <!--Header-->
   <app-header></app-header>
