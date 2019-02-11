@@ -1,0 +1,24 @@
+:host {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-wrapper {
+  @media (max-width: 1000px) {
+    button {
+      display: block;
+    }
+  }
+  &.opened {
+    button {
+      display: block;
+    }
+  }
+}
+
+.settings-drop-down {
+  z-index: 1111;
+}

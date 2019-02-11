@@ -1,12 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-
+// animations
 import { fadeStateTrigger } from '../../animations/fade.animation';
-
-import { MIDDLE_CONTAINER_HEADERS_TITLES } from '../../consts';
-import { State } from '../../store/reducers';
+// store
 import { ToggleVaultSettingsList } from '../../store/actions/vault-settings-list.actions';
+import { State } from '../../store/reducers';
+// constants
+import { MIDDLE_CONTAINER_HEADERS_TITLES, VAULT_SELECTORS } from '../../consts';
 
 @Component({
   selector: 'app-middle-content-header',
@@ -21,6 +22,7 @@ export class MiddleContentHeaderComponent implements OnInit {
   @Input() isButtons = false;
   @Input() isDangerZone = false;
   public titles = MIDDLE_CONTAINER_HEADERS_TITLES;
+  public vaultSelectors = VAULT_SELECTORS;
   public isVaultSettingsListOpened$: Observable<boolean>;
 
   constructor(private store: Store<State>) {

@@ -1,0 +1,27 @@
+<div class="title">
+  <mark [ngStyle]="{ backgroundColor: color }">{{ shortTitle }}</mark>
+  <span>{{ organization.title }}</span>
+</div>
+<div class="button-wrapper" [ngClass]="{ 'opened': selectorID === (openedPopUpID$ | async) }">
+  <!-- add visible class to show button -->
+  <button
+    class="default-button settings"
+    (click)="openPopUp()"
+    [ngClass]="settingsOrganizationsSelectors.OPEN_POP_UP_BUTTON_CLASS"
+  >
+    <i class="fas fa-cog" [ngClass]="settingsOrganizationsSelectors.OPEN_POP_UP_BUTTON_CLASS"></i>
+    <i class="fas fa-caret-down" [ngClass]="settingsOrganizationsSelectors.OPEN_POP_UP_BUTTON_CLASS"></i>
+  </button>
+  <section
+    class="drop-down settings-drop-down"
+    [id]="selectorID"
+    [ngClass]="{ 'opened': selectorID === (openedPopUpID$ | async) }"
+  >
+    <ul>
+      <li class="delete">
+        <i class="fas fa-sign-out-alt settings-organizations-drop-down-list-icon"></i>
+        <span>Leave</span>
+      </li>
+    </ul>
+  </section>
+</div>

@@ -2,16 +2,20 @@
   <h1>{{ title }}</h1>
   <div *ngIf="isButtons && title === titles.STORAGE" class="buttons">
     <div class="settings-container">
-      <button class="default-button settings" (click)="toggleVaultSettingsList()">
-        <i class="fas fa-cog"></i>
+      <button
+        class="default-button settings"
+        (click)="toggleVaultSettingsList()"
+        [ngClass]="vaultSelectors.OPEN_SETTINGS_POP_UP_BUTTON_CLASS"
+      >
+        <i class="fas fa-cog" [ngClass]="vaultSelectors.OPEN_SETTINGS_POP_UP_BUTTON_CLASS"></i>
         <i
           class="fas fa-caret-down"
+          [ngClass]="vaultSelectors.OPEN_SETTINGS_POP_UP_BUTTON_CLASS"
           [ngStyle]="{ 'transform': (isVaultSettingsListOpened$ | async) ? 'rotate(180deg)' : 'none' }"
         ></i>
       </button>
       <app-vault-settings-list
         *ngIf="(isVaultSettingsListOpened$ | async)"
-        [@fade]="true"
       ></app-vault-settings-list>
     </div>
     <button class="default-button add-item">

@@ -27,9 +27,13 @@ import { DropDownComponent } from './components/drop-down/drop-down.component';
 import { VaultOrganizationsListComponent } from './components/vault-organizations-list/vault-organizations-list.component';
 import { VaultFiltersComponent } from './components/vault-filters/vault-filters.component';
 import { VaultSettingsListComponent } from './components/vault-settings-list/vault-settings-list.component';
-
+import { SettingsOrganizationsListComponent } from './components/settings-organizations-list/settings-organizations-list.component';
+import { SettingsOrganizationsListItemComponent } from './components/settings-organizations-list-item/settings-organizations-list-item.component';
+// Services
+import { CommonService } from './services/common/common.service';
+// Store
 import { Reducers } from './store/reducers';
-
+import { HeaderUserPopUpComponent } from './components/header-user-pop-up/header-user-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -57,12 +61,18 @@ import { Reducers } from './store/reducers';
     DropDownComponent,
     VaultOrganizationsListComponent,
     VaultFiltersComponent,
-    VaultSettingsListComponent
+    VaultSettingsListComponent,
+    SettingsOrganizationsListComponent,
+    SettingsOrganizationsListItemComponent,
+    HeaderUserPopUpComponent
   ],
   imports: [
     CommonModule,
     SystemRoutingModule,
     StoreModule.forRoot(Reducers)
+  ],
+  providers: [
+    CommonService
   ]
 })
 export class SystemModule { }

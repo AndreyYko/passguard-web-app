@@ -11,6 +11,10 @@ export const vaultSettingsListReducer: ActionReducer<any> = (state: VaultSetting
       return update(state, {
         isOpened: { $set: !state.isOpened }
       });
+    case ActionTypes.CLOSE_VAULT_SETTINGS_LIST:
+      return update(state, {
+        isOpened: { $set: false }
+      });
     default:
       return state;
   }
