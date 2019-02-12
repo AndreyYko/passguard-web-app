@@ -5,6 +5,8 @@ import { toggleAddItemPopUpStateTrigger } from '../../animations/toggle-add-item
 // store
 import { State } from '../../store/reducers';
 import { CloseAddItemPopUp } from '../../store/actions/add-item-pop-up.actions';
+// models
+import { AddItemOption } from '../../models/add-item-option.model';
 // constants
 import { ADD_ITEM_POP_UP_SELECTORS } from '../../consts';
 
@@ -18,6 +20,20 @@ import { ADD_ITEM_POP_UP_SELECTORS } from '../../consts';
 })
 export class AddItemPopUpComponent implements OnInit {
   public selectors = ADD_ITEM_POP_UP_SELECTORS;
+  public options: AddItemOption[] = [
+    {
+      title: 'Login',
+      value: 'login'
+    },
+    {
+      title: 'Card',
+      value: 'card'
+    },
+    {
+      title: 'Secure Note',
+      value: 'note'
+    }
+  ];
 
   constructor(private store: Store<State>) { }
 
@@ -28,9 +44,5 @@ export class AddItemPopUpComponent implements OnInit {
     if (event.target.id === this.selectors.WRAPPER_ID) {
       this.store.dispatch(new CloseAddItemPopUp());
     }
-  }
-
-  onCancelClick() {
-    this.store.dispatch(new CloseAddItemPopUp());
   }
 }

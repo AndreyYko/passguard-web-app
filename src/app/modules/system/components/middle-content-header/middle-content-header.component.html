@@ -1,5 +1,6 @@
 <div class="middle-container-header" [ngClass]="{ 'settings-danger-zone': isDangerZone }">
   <h1>{{ title }}</h1>
+  <!-- If middle container header has buttons, they will render depending to titles -->
   <div *ngIf="isButtons && title === titles.STORAGE" class="buttons">
     <div class="settings-container">
       <button
@@ -24,7 +25,7 @@
     </button>
   </div>
   <div *ngIf="isButtons && title === titles.ORGANIZATIONS" class="buttons">
-    <button class="default-button add-item">
+    <button class="default-button add-item" [routerLink]="'/settings/create-organization'">
       <i class="fas fa-plus"></i>
       <span>New Organization</span>
     </button>

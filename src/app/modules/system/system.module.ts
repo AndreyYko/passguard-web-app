@@ -38,6 +38,7 @@ import { AddItemPopUpComponent } from './components/add-item-pop-up/add-item-pop
 import { AddItemLoginFormComponent } from './components/add-item-login-form/add-item-login-form.component';
 import { AddItemCardFormComponent } from './components/add-item-card-form/add-item-card-form.component';
 import { AddItemNoteFormComponent } from './components/add-item-note-form/add-item-note-form.component';
+import { SettingsCreateOrganizationComponent } from './pages/settings-page/settings-create-organization/settings-create-organization.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { AddItemNoteFormComponent } from './components/add-item-note-form/add-it
     AddItemPopUpComponent,
     AddItemLoginFormComponent,
     AddItemCardFormComponent,
-    AddItemNoteFormComponent
+    AddItemNoteFormComponent,
+    SettingsCreateOrganizationComponent
   ],
   imports: [
     CommonModule,

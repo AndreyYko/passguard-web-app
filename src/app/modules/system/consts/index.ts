@@ -6,7 +6,8 @@ export enum MIDDLE_CONTAINER_HEADERS_TITLES {
   CHANGE_EMAIL = 'Change Email',
   CHANGE_MASTER_PASSWORD = 'Change Master Password',
   DANGER_ZONE = 'Danger Zone',
-  ORGANIZATIONS = 'Organizations'
+  ORGANIZATIONS = 'Organizations',
+  NEW_ORGANIZATION = 'New Organization'
 }
 // Header link titles
 export enum PAGES {

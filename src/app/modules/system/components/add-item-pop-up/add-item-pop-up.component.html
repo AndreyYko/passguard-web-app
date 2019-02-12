@@ -13,10 +13,10 @@
       <div class="add-item-form-group select">
         <label for="add-item-form-item-type">What type of item is this?</label>
         <select name="type" id="add-item-form-item-type">
-          <option value="login">Login</option>
-          <option value="card">Card</option>
-          <option value="identity">Identity</option>
-          <option value="note">Secure Note</option>
+          <option
+            *ngFor="let option of options"
+            [value]="option.value"
+          >{{ option.title }}</option>
         </select>
       </div>
     </form>

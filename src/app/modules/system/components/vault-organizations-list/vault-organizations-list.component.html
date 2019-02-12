@@ -8,7 +8,11 @@
     <span>Organization 2</span>
   </li>
 </ul>
-<button class="right-container-add-organization" [ngClass]="{ 'bottom-margin': isInDropDown }">
+<button
+  class="right-container-add-organization"
+  [ngClass]="{ 'bottom-margin': isInDropDown }"
+  [routerLink]="'/settings/create-organization'"
+>
   <i class="fas fa-plus"></i>
   <span>New organization</span>
 </button>
