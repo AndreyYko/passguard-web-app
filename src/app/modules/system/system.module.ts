@@ -34,6 +34,10 @@ import { CommonService } from './services/common/common.service';
 // Store
 import { Reducers } from './store/reducers';
 import { HeaderUserPopUpComponent } from './components/header-user-pop-up/header-user-pop-up.component';
+import { AddItemPopUpComponent } from './components/add-item-pop-up/add-item-pop-up.component';
+import { AddItemLoginFormComponent } from './components/add-item-login-form/add-item-login-form.component';
+import { AddItemCardFormComponent } from './components/add-item-card-form/add-item-card-form.component';
+import { AddItemNoteFormComponent } from './components/add-item-note-form/add-item-note-form.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +68,11 @@ import { HeaderUserPopUpComponent } from './components/header-user-pop-up/header
     VaultSettingsListComponent,
     SettingsOrganizationsListComponent,
     SettingsOrganizationsListItemComponent,
-    HeaderUserPopUpComponent
+    HeaderUserPopUpComponent,
+    AddItemPopUpComponent,
+    AddItemLoginFormComponent,
+    AddItemCardFormComponent,
+    AddItemNoteFormComponent
   ],
   imports: [
     CommonModule,

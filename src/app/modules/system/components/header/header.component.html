@@ -18,11 +18,11 @@
       </li>
     </ul>
     <ul class="header-navigation">
-      <li class="user-icons" (click)="toggleUserPopUp()">
-        <span class="user-icon-wrapper">
-          <i class="fas fa-user user-icon"></i>
+      <li class="user-icons" (click)="toggleUserPopUp()" [ngClass]="headerSelectors.OPEN_USER_POP_UP_BUTTON_CLASS">
+        <span class="user-icon-wrapper" [ngClass]="headerSelectors.OPEN_USER_POP_UP_BUTTON_CLASS">
+          <i class="fas fa-user user-icon" [ngClass]="headerSelectors.OPEN_USER_POP_UP_BUTTON_CLASS"></i>
         </span>
-        <span class="icon-arrow"></span>
+        <span class="icon-arrow" [ngClass]="headerSelectors.OPEN_USER_POP_UP_BUTTON_CLASS"></span>
       </li>
       <app-header-user-pop-up></app-header-user-pop-up>
     </ul>

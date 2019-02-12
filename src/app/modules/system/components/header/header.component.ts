@@ -6,7 +6,7 @@ import { State } from '../../store/reducers';
 import { ToggleMobileMenu } from '../../store/actions/mobile-menu.actions';
 import { ToggleHeaderUserPopUp } from '../../store/actions/header-user-pop-up.actions';
 // constants
-import { PAGES } from '../../consts';
+import { HEADER_SELECTORS, PAGES } from '../../consts';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +15,7 @@ import { PAGES } from '../../consts';
 })
 export class HeaderComponent implements OnInit {
   public pages = PAGES;
+  public headerSelectors = HEADER_SELECTORS;
 
   constructor(
     private store: Store<State>,

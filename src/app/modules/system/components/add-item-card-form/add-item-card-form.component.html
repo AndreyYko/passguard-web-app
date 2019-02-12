@@ -1,0 +1,53 @@
+<form class="add-item-form">
+  <div class="add-item-form-group-double">
+    <div class="add-item-form-group">
+      <label for="add-item-form-item-name">Name</label>
+      <input type="text" id="add-item-form-item-name">
+    </div>
+    <div class="add-item-form-group select">
+      <label for="add-item-form-item-ownership">Who owns this item?</label>
+      <select id="add-item-form-item-ownership">
+        <option value="email">andrushagalushka@gmail.com</option>
+      </select>
+    </div>
+  </div>
+  <div class="add-item-form-group-double">
+    <div class="add-item-form-group">
+      <label for="add-item-form-item-cardholder">Cardholder Name</label>
+      <input type="text" id="add-item-form-item-cardholder">
+    </div>
+    <div class="add-item-form-group select">
+      <label for="add-item-form-item-brand">Brand</label>
+      <select id="add-item-form-item-brand">
+        <option value="Visa">Visa</option>
+        <option value="Mastercard">Mastercard</option>
+      </select>
+    </div>
+  </div>
+  <div class="add-item-form-group-double">
+    <div class="add-item-form-group">
+      <label for="add-item-form-item-card-number">Card Number</label>
+      <input type="text" id="add-item-form-item-card-number">
+    </div>
+    <div class="add-item-form-group">
+      <div class="add-item-form-group-double">
+        <div class="add-item-form-group">
+          <label for="add-item-form-item-card-expiration-date">Expiration Date</label>
+          <input type="text" id="add-item-form-item-card-expiration-date">
+        </div>
+        <div class="add-item-form-group">
+          <label for="add-item-form-item-card-cvv">CVV</label>
+          <input type="password" id="add-item-form-item-card-cvv" maxlength="3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="add-item-form-group textarea">
+    <label for="">Notes</label>
+    <textarea id="" rows="6"></textarea>
+  </div>
+  <div class="add-item-form-submit-group">
+    <button type="submit" class="default-middle-content-form-button orange fit-content-width">Save</button>
+    <button type="button" class="default-middle-content-form-button fit-content-width" (click)="closePopUp()">Cancel</button>
+  </div>
+</form>

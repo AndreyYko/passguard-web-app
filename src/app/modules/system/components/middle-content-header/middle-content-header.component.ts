@@ -4,8 +4,9 @@ import { Observable } from 'rxjs';
 // animations
 import { fadeStateTrigger } from '../../animations/fade.animation';
 // store
-import { ToggleVaultSettingsList } from '../../store/actions/vault-settings-list.actions';
 import { State } from '../../store/reducers';
+import { ToggleVaultSettingsList } from '../../store/actions/vault-settings-list.actions';
+import { ToggleAddItemPopUp } from '../../store/actions/add-item-pop-up.actions';
 // constants
 import { MIDDLE_CONTAINER_HEADERS_TITLES, VAULT_SELECTORS } from '../../consts';
 
@@ -32,7 +33,11 @@ export class MiddleContentHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  public toggleVaultSettingsList() {
+  toggleVaultSettingsList() {
     this.store.dispatch(new ToggleVaultSettingsList());
+  }
+
+  toggleAddItemPopUp() {
+    this.store.dispatch(new ToggleAddItemPopUp());
   }
 }

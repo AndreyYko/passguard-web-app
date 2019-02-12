@@ -1,6 +1,7 @@
 <!-- Mobile Menu -->
+<app-add-item-pop-up *ngIf="isAddItemPopUp$ | async"></app-add-item-pop-up>
 <app-mobile-menu [@toggleMobileMenu]="true" *ngIf="isMobileMenu$ | async"></app-mobile-menu>
-<section class="page-content">
+<section class="page-content" [ngClass]="{ 'no-scrolled': (isAddItemPopUp$ | async) }">
   <!-- Stub for mobile menu, for closing -->
   <div
     *ngIf="isMobileMenu$ | async"

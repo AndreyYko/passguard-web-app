@@ -18,7 +18,7 @@
         *ngIf="(isVaultSettingsListOpened$ | async)"
       ></app-vault-settings-list>
     </div>
-    <button class="default-button add-item">
+    <button class="default-button add-item" (click)="toggleAddItemPopUp()">
       <i class="fas fa-plus"></i>
       <span>Add Item</span>
     </button>

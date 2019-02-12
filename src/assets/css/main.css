@@ -794,20 +794,6 @@ section.add-item-popup {
   z-index: 1;
 }
 
-@media (max-width: 1000px) {
-  section.add-item-popup {
-    background-color: transparent;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    height: -webkit-calc(100vh - 56px);
-    height: calc(100vh - 56px);
-    position: absolute;
-    top: 56px;
-  }
-}
-
 section.add-item-popup .add-item-form-wrapper {
   width: 60%;
   max-width: 800px;
@@ -820,9 +806,11 @@ section.add-item-popup .add-item-form-wrapper {
 @media (max-width: 1000px) {
   section.add-item-popup .add-item-form-wrapper {
     width: 100%;
-    max-width: 100%;
-    -webkit-border-radius: 0;
-    border-radius: 0;
+    max-width: 90%;
+    max-height: 80vh;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: auto;
   }
 }
 
@@ -1202,7 +1190,7 @@ form.add-item-form .add-item-form-group.select:after {
   display: block;
   width: 8px;
   height: 8px;
-  background-image: url("/src/assets/dist/images/caret-down-solid.svg");
+  background-image: url("../images/caret-down-solid.svg");
   background-repeat: no-repeat;
   -webkit-background-size: 100%;
   background-size: 100%;

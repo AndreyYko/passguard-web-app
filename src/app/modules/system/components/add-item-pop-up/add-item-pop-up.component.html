@@ -1,0 +1,28 @@
+<section
+  class="add-item-popup"
+  [id]="selectors.WRAPPER_ID"
+  (click)="closeAddItemPopUp($event)"
+  [@toggleAddItemPopUp]="true"
+>
+  <div
+    class="add-item-form-wrapper"
+    [id]="selectors.FORM_WRAPPER_ID"
+  >
+    <h1>Add Item</h1>
+    <form class="add-item-form">
+      <div class="add-item-form-group select">
+        <label for="add-item-form-item-type">What type of item is this?</label>
+        <select name="type" id="add-item-form-item-type">
+          <option value="login">Login</option>
+          <option value="card">Card</option>
+          <option value="identity">Identity</option>
+          <option value="note">Secure Note</option>
+        </select>
+      </div>
+    </form>
+    <!-- Form for login item -->
+    <!--<app-add-item-login-form></app-add-item-login-form>-->
+    <!--<app-add-item-card-form></app-add-item-card-form>-->
+    <app-add-item-note-form></app-add-item-note-form>
+  </div>
+</section>

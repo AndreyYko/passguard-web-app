@@ -32,11 +32,20 @@ export const COLORS = [
   '#AAAAAA'
 ];
 
+export enum HEADER_SELECTORS {
+  OPEN_USER_POP_UP_BUTTON_CLASS = 'header-open-user-pop-up-button'
+}
+
 export enum VAULT_SELECTORS {
-  OPEN_SETTINGS_POP_UP_BUTTON_CLASS = 'vault-open-settings-pop-up-button',
+  OPEN_SETTINGS_POP_UP_BUTTON_CLASS = 'vault-open-settings-pop-up-button'
 }
 
 export enum SETTINGS_ORGANIZATIONS_SELECTORS {
   POP_UP_ID = 'settings-organizations-pop-up-',
-  OPEN_POP_UP_BUTTON_CLASS = 'settings-organizations-open-pop-up-button',
+  OPEN_POP_UP_BUTTON_CLASS = 'settings-organizations-open-pop-up-button'
+}
+
+export enum ADD_ITEM_POP_UP_SELECTORS {
+  WRAPPER_ID = 'add-item-pop-up-wrapper',
+  FORM_WRAPPER_ID = 'add-item-pop-up-form-wrapper'
 }
