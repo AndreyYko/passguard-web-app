@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { FormControl, FormGroup } from '@angular/forms';
 // animations
 import { toggleAddItemPopUpStateTrigger } from '../../animations/toggle-add-item-pop-up.animation';
 // store
@@ -20,6 +21,7 @@ import { ADD_ITEM_POP_UP_SELECTORS } from '../../consts';
 })
 export class AddItemPopUpComponent implements OnInit {
   public selectors = ADD_ITEM_POP_UP_SELECTORS;
+  public form: FormGroup;
   public options: AddItemOption[] = [
     {
       title: 'Login',
@@ -35,7 +37,11 @@ export class AddItemPopUpComponent implements OnInit {
     }
   ];
 
-  constructor(private store: Store<State>) { }
+  constructor(private store: Store<State>) {
+    this.form = new FormGroup({
+      type: new FormControl(this.options[0].value)
+    });
+  }
 
   ngOnInit() {
   }

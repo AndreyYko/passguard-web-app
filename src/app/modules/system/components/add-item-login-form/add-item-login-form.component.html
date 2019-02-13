@@ -1,29 +1,38 @@
-<form class="add-item-form">
+<form class="add-item-form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="add-item-form-group-double">
     <div class="add-item-form-group">
       <label for="add-item-form-item-name">Name</label>
-      <input type="text" id="add-item-form-item-name">
+      <input type="text" id="add-item-form-item-name" formControlName="name">
     </div>
     <div class="add-item-form-group select">
       <label for="add-item-form-item-ownership">Who owns this item?</label>
-      <select id="add-item-form-item-ownership">
-        <option value="email">andrushagalushka@gmail.com</option>
+      <select id="add-item-form-item-ownership" formControlName="owner">
+        <option [ngValue]="0">andrushagalushka@gmail.com</option>
       </select>
     </div>
   </div>
   <div class="add-item-form-group-double">
     <div class="add-item-form-group">
       <label for="add-item-form-item-login">Username</label>
-      <input type="text" id="add-item-form-item-login">
+      <input type="text" id="add-item-form-item-login" formControlName="username">
     </div>
-    <div class="add-item-form-group">
+    <div class="add-item-form-group password">
       <label for="add-item-form-item-password">Password</label>
-      <input type="password" id="add-item-form-item-password">
+      <div class="add-item-form-group-password-container">
+        <input [type]="isVisiblePassword ? 'text' : 'password'" id="add-item-form-item-password" formControlName="password">
+        <div class="add-item-form-group-password-container-option" (click)="togglePasswordType()">
+          <i class="fas fa-eye" *ngIf="!isVisiblePassword"></i>
+          <i class="fas fa-eye-slash" *ngIf="isVisiblePassword"></i>
+        </div>
+        <div class="add-item-form-group-password-container-option">
+          <i class="fas fa-copy"></i>
+        </div>
+      </div>
     </div>
   </div>
   <div class="add-item-form-group textarea">
-    <label for="">Notes</label>
-    <textarea id="" rows="6"></textarea>
+    <label for="add-item-form-item-notes">Notes</label>
+    <textarea id="add-item-form-item-notes" rows="6" formControlName="notes"></textarea>
   </div>
   <div class="add-item-form-submit-group">
     <button type="submit" class="default-middle-content-form-button orange fit-content-width">Save</button>

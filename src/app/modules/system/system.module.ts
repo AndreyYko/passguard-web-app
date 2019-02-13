@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Main components & routing module
 import { SystemComponent } from './system.component';
 import { SystemRoutingModule } from './system-routing.module';
@@ -79,7 +80,9 @@ import { SettingsCreateOrganizationComponent } from './pages/settings-page/setti
   imports: [
     CommonModule,
     SystemRoutingModule,
-    StoreModule.forRoot(Reducers)
+    StoreModule.forRoot(Reducers),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CommonService

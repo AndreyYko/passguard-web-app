@@ -9,20 +9,20 @@
     [id]="selectors.FORM_WRAPPER_ID"
   >
     <h1>Add Item</h1>
-    <form class="add-item-form">
+    <form class="add-item-form" [formGroup]="form">
       <div class="add-item-form-group select">
         <label for="add-item-form-item-type">What type of item is this?</label>
-        <select name="type" id="add-item-form-item-type">
+        <select name="type" id="add-item-form-item-type" formControlName="type">
           <option
             *ngFor="let option of options"
-            [value]="option.value"
+            [ngValue]="option.value"
+
           >{{ option.title }}</option>
         </select>
       </div>
     </form>
-    <!-- Form for login item -->
-    <!--<app-add-item-login-form></app-add-item-login-form>-->
-    <!--<app-add-item-card-form></app-add-item-card-form>-->
-    <app-add-item-note-form></app-add-item-note-form>
+    <app-add-item-login-form *ngIf="form.value.type === options[0].value"></app-add-item-login-form>
+    <app-add-item-card-form *ngIf="form.value.type === options[1].value"></app-add-item-card-form>
+    <app-add-item-note-form *ngIf="form.value.type === options[2].value"></app-add-item-note-form>
   </div>
 </section>
