@@ -24,6 +24,12 @@ export class AddItemLoginFormComponent implements OnInit {
     });
   }
 
+  get name() { return this.form.get('name'); }
+
+  get username() { return this.form.get('username'); }
+
+  get password() { return this.form.get('password'); }
+
   ngOnInit() {
   }
 
@@ -36,6 +42,12 @@ export class AddItemLoginFormComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.form.invalid) {
+      return Object.keys(this.form.controls).forEach(field => {
+        const control = this.form.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
+    }
     console.log(this.form.value);
   }
 }

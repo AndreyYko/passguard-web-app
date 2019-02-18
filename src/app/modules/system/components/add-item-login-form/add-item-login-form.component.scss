@@ -3,11 +3,13 @@
     label {
       color: #FF6347;
     }
+
     input {
       position: relative;
       border-color: #FF6347;
       padding-right: 30px;
     }
+
     &::after {
       content: '';
       display: block;
@@ -20,15 +22,24 @@
       background-size: 100%;
       background-position: 0 0;
     }
+
+    &.password {
+      &::after {
+        right: 105px;
+      }
+    }
   }
+
   &.password {
     .add-item-form-group-password-container {
       display: flex;
+
       input {
         width: calc(100% - 82px);
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
+
       .add-item-form-group-password-container-option {
         width: 40px;
         border: 1px solid rgba(0, 0, 0, 0.125);
@@ -38,10 +49,12 @@
         align-items: center;
         justify-content: center;
         color: #555;
+
         &:last-child {
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
         }
+
         &:hover {
           background-color: rgba(0, 0, 0, 0.03);
           color: #222;
