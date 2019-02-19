@@ -4,6 +4,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 // store
 import { State } from '../../store/reducers';
 import { CloseAddItemPopUp } from '../../store/actions/add-item-pop-up.actions';
+// services
+import { CommonService } from '../../services/common/common.service';
 
 @Component({
   selector: 'app-add-item-login-form',
@@ -14,7 +16,10 @@ export class AddItemLoginFormComponent implements OnInit {
   public form: FormGroup;
   public isVisiblePassword = false;
 
-  constructor(private store: Store<State>) {
+  constructor(
+    private store: Store<State>,
+    private commonService: CommonService
+  ) {
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),
       owner: new FormControl(0),
@@ -43,10 +48,7 @@ export class AddItemLoginFormComponent implements OnInit {
 
   onSubmit() {
     if (this.form.invalid) {
-      return Object.keys(this.form.controls).forEach(field => {
-        const control = this.form.get(field);
-        control.markAsTouched({ onlySelf: true });
-      });
+      return this.commonService.markAsTouchedFields(this.form);
     }
     console.log(this.form.value);
   }

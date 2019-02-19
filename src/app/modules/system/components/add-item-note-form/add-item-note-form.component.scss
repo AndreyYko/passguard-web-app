@@ -1,0 +1,32 @@
+.add-item-form-group {
+  &.has-error {
+    label {
+      color: #FF6347;
+    }
+
+    input {
+      position: relative;
+      border-color: #FF6347;
+      padding-right: 30px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 21px;
+      top: 34px;
+      background-image: url("../../../../../assets/images/exclamation-circle-solid.svg");
+      background-size: 100%;
+      background-position: 0 0;
+    }
+
+    &.password {
+      &::after {
+        right: 105px;
+      }
+    }
+  }
+}

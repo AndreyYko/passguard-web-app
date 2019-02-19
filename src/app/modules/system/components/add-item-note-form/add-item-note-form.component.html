@@ -1,8 +1,11 @@
-<form class="add-item-form">
+<form class="add-item-form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="add-item-form-group-double">
-    <div class="add-item-form-group">
+    <div
+      class="add-item-form-group"
+      [ngClass]="{ 'has-error': name.invalid && (name.dirty || name.touched) }"
+    >
       <label for="add-item-form-item-name">Name</label>
-      <input type="text" id="add-item-form-item-name">
+      <input type="text" id="add-item-form-item-name" formControlName="name">
     </div>
     <div class="add-item-form-group select">
       <label for="add-item-form-item-ownership">Who owns this item?</label>

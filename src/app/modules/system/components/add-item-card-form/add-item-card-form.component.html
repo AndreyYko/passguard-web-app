@@ -1,50 +1,67 @@
-<form class="add-item-form">
+<form class="add-item-form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="add-item-form-group-double">
-    <div class="add-item-form-group">
+    <div
+      class="add-item-form-group"
+      [ngClass]="{ 'has-error': name.invalid && (name.dirty || name.touched) }"
+    >
       <label for="add-item-form-item-name">Name</label>
-      <input type="text" id="add-item-form-item-name">
+      <input type="text" id="add-item-form-item-name" formControlName="name">
     </div>
     <div class="add-item-form-group select">
       <label for="add-item-form-item-ownership">Who owns this item?</label>
-      <select id="add-item-form-item-ownership">
-        <option value="email">andrushagalushka@gmail.com</option>
+      <select id="add-item-form-item-ownership" formControlName="owner">
+        <option [ngValue]="0">andrushagalushka@gmail.com</option>
       </select>
     </div>
   </div>
   <div class="add-item-form-group-double">
-    <div class="add-item-form-group">
+    <div
+      class="add-item-form-group"
+      [ngClass]="{ 'has-error': cardholder.invalid && (cardholder.dirty || cardholder.touched) }"
+    >
       <label for="add-item-form-item-cardholder">Cardholder Name</label>
-      <input type="text" id="add-item-form-item-cardholder">
+      <input type="text" id="add-item-form-item-cardholder" formControlName="cardholder">
     </div>
     <div class="add-item-form-group select">
       <label for="add-item-form-item-brand">Brand</label>
-      <select id="add-item-form-item-brand">
-        <option value="Visa">Visa</option>
-        <option value="Mastercard">Mastercard</option>
+      <select id="add-item-form-item-brand" formControlName="brand">
+        <option
+          *ngFor="let brand of brands"
+          [ngValue]="brand.id"
+        >{{ brand.title }}</option>
       </select>
     </div>
   </div>
   <div class="add-item-form-group-double">
-    <div class="add-item-form-group">
+    <div
+      class="add-item-form-group"
+      [ngClass]="{ 'has-error': cardNumber.invalid && (cardNumber.dirty || cardNumber.touched) }"
+    >
       <label for="add-item-form-item-card-number">Card Number</label>
-      <input type="text" id="add-item-form-item-card-number">
+      <input type="text" id="add-item-form-item-card-number" formControlName="cardNumber">
     </div>
     <div class="add-item-form-group">
       <div class="add-item-form-group-double">
-        <div class="add-item-form-group">
+        <div
+          class="add-item-form-group first"
+          [ngClass]="{ 'has-error': expiryDate.invalid && (expiryDate.dirty || expiryDate.touched) }"
+        >
           <label for="add-item-form-item-card-expiration-date">Expiration Date</label>
-          <input type="text" id="add-item-form-item-card-expiration-date">
+          <input type="text" id="add-item-form-item-card-expiration-date" formControlName="expiryDate">
         </div>
-        <div class="add-item-form-group">
+        <div
+          class="add-item-form-group last"
+          [ngClass]="{ 'has-error': cvv.invalid && (cvv.dirty || cvv.touched) }"
+        >
           <label for="add-item-form-item-card-cvv">CVV</label>
-          <input type="password" id="add-item-form-item-card-cvv" maxlength="3">
+          <input type="password" id="add-item-form-item-card-cvv" maxlength="3" formControlName="cvv">
         </div>
       </div>
     </div>
   </div>
   <div class="add-item-form-group textarea">
     <label for="">Notes</label>
-    <textarea id="" rows="6"></textarea>
+    <textarea id="" rows="6" formControlName="notes"></textarea>
   </div>
   <div class="add-item-form-submit-group">
     <button type="submit" class="default-middle-content-form-button orange fit-content-width">Save</button>
