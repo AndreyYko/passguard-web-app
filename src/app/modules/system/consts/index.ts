@@ -23,6 +23,12 @@ export enum SIDES_CONTAINERS_HEADERS_TITLES {
   SETTINGS = 'Settings'
 }
 
+export enum VAULT_ITEM_TYPES {
+  LOGIN = 'login',
+  CARD = 'card',
+  NOTE = 'note'
+}
+
 export const COLORS = [
   '#001f3f',
   '#0074D9',

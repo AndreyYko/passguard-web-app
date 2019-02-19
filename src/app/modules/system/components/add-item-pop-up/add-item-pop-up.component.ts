@@ -9,7 +9,7 @@ import { CloseAddItemPopUp } from '../../store/actions/add-item-pop-up.actions';
 // models
 import { AddItemOption } from '../../models/add-item-option.model';
 // constants
-import { ADD_ITEM_POP_UP_SELECTORS } from '../../consts';
+import { ADD_ITEM_POP_UP_SELECTORS, VAULT_ITEM_TYPES } from '../../consts';
 
 @Component({
   selector: 'app-add-item-pop-up',
@@ -20,20 +20,21 @@ import { ADD_ITEM_POP_UP_SELECTORS } from '../../consts';
   ]
 })
 export class AddItemPopUpComponent implements OnInit {
+  private itemTypes = VAULT_ITEM_TYPES;
   public selectors = ADD_ITEM_POP_UP_SELECTORS;
   public form: FormGroup;
   public options: AddItemOption[] = [
     {
       title: 'Login',
-      value: 'login'
+      value: this.itemTypes.LOGIN
     },
     {
       title: 'Card',
-      value: 'card'
+      value: this.itemTypes.CARD
     },
     {
       title: 'Secure Note',
-      value: 'note'
+      value: this.itemTypes.NOTE
     }
   ];
 

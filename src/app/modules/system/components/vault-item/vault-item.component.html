@@ -1,0 +1,8 @@
+<input type="checkbox">
+<i class="fas fa-globe" *ngIf="isLogin"></i>
+<i class="far fa-credit-card" *ngIf="isCard"></i>
+<i class="far fa-sticky-note" *ngIf="isNote"></i>
+<div class="text">
+  <h3>{{ item.name }}</h3>
+  <span>{{ getOwnerName(item.owner) }}</span>
+</div>

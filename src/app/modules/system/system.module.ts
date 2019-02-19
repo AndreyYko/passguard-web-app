@@ -40,6 +40,8 @@ import { AddItemLoginFormComponent } from './components/add-item-login-form/add-
 import { AddItemCardFormComponent } from './components/add-item-card-form/add-item-card-form.component';
 import { AddItemNoteFormComponent } from './components/add-item-note-form/add-item-note-form.component';
 import { SettingsCreateOrganizationComponent } from './pages/settings-page/settings-create-organization/settings-create-organization.component';
+import { VaultItemsListComponent } from './components/vault-items-list/vault-items-list.component';
+import { VaultItemComponent } from './components/vault-item/vault-item.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,9 @@ import { SettingsCreateOrganizationComponent } from './pages/settings-page/setti
     AddItemLoginFormComponent,
     AddItemCardFormComponent,
     AddItemNoteFormComponent,
-    SettingsCreateOrganizationComponent
+    SettingsCreateOrganizationComponent,
+    VaultItemsListComponent,
+    VaultItemComponent
   ],
   imports: [
     CommonModule,

@@ -21,8 +21,8 @@
         </select>
       </div>
     </form>
-    <app-add-item-login-form *ngIf="form.value.type === options[0].value"></app-add-item-login-form>
-    <app-add-item-card-form *ngIf="form.value.type === options[1].value"></app-add-item-card-form>
-    <app-add-item-note-form *ngIf="form.value.type === options[2].value"></app-add-item-note-form>
+    <app-add-item-login-form *ngIf="form.value.type === itemTypes.LOGIN"></app-add-item-login-form>
+    <app-add-item-card-form *ngIf="form.value.type === itemTypes.CARD"></app-add-item-card-form>
+    <app-add-item-note-form *ngIf="form.value.type === itemTypes.NOTE"></app-add-item-note-form>
   </div>
 </section>
