@@ -20,7 +20,7 @@ import { ADD_ITEM_POP_UP_SELECTORS, VAULT_ITEM_TYPES } from '../../consts';
   ]
 })
 export class AddItemPopUpComponent implements OnInit {
-  private itemTypes = VAULT_ITEM_TYPES;
+  public itemTypes = VAULT_ITEM_TYPES;
   public selectors = ADD_ITEM_POP_UP_SELECTORS;
   public form: FormGroup;
   public options: AddItemOption[] = [

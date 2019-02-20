@@ -6,22 +6,33 @@
   >
 </form>
 <ul class="default-list first">
-  <li class="active">
+  <li
+    [ngClass]="{ 'active': isAll }"
+  >
     <i class="fas fa-table"></i>
     <span>All elements</span>
   </li>
-  <li>
+  <li
+    [ngClass]="{ 'active': isFavorites }"
+    (click)="setFavoritesFilter()"
+  >
     <i class="fas fa-star"></i>
     <span>Favorite</span>
   </li>
 </ul>
 <ul class="default-list">
   <h3>Elements type</h3>
-  <li>
+  <li
+    [ngClass]="{ 'active': isLogin }"
+    (click)="setTypeFilter(itemTypes.LOGIN)"
+  >
     <i class="fas fa-globe"></i>
     <span>Login</span>
   </li>
-  <li>
+  <li
+    [ngClass]="{ 'active': isCard }"
+    (click)="setTypeFilter(itemTypes.CARD)"
+  >
     <i class="far fa-credit-card"></i>
     <span>Card</span>
   </li>
@@ -29,7 +40,10 @@
     <i class="far fa-id-card"></i>
     <span>ID Card</span>
   </li>
-  <li>
+  <li
+    [ngClass]="{ 'active': isNote }"
+    (click)="setTypeFilter(itemTypes.NOTE)"
+  >
     <i class="far fa-sticky-note"></i>
     <span>Secure note</span>
   </li>
